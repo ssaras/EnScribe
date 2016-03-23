@@ -49,18 +49,6 @@
 		});
 	}
 
-	var moveSideBarDown = function () {
-		var sideBarClone = sideBar.clone();
-		sideBar.remove();
-		pageContainer.append(sideBarClone);
-	}
-
-	var moveSideBarUp = function () {
-		var sideBarClone = sideBar.clone();
-		sideBar.remove();
-		pageContainer.prepend(sideBarClone);
-	}
-
 	$(document).ready(function() {
 		$(window).resize(function(){
 			if (document.documentElement.clientWidth < 1030) {
@@ -72,7 +60,6 @@
 		});
 		if (document.documentElement.clientWidth < 1030) {
 			closeSideBar();
-			moveSideBarDown();
 		}
 		enclosLogoExpanded.click(function(){
 			closeSideBar();
@@ -80,7 +67,6 @@
 		enclosLogoCollapsed.click(function(){
 			openSideBar();
 		});
-
 	});
 
 }(jQuery));
